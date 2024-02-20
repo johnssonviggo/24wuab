@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#container_fp {
+  display: grid;
+  grid-template-columns: 40vw, 60vw;
+  grid-template-rows: 500px, 500px 500px 500px 500px;
+  grid-template-areas:
+    "hd nv"
+    "mm mm"
+    "sc sc"
+    "ft ft";
+}
+
+header {
+  background-color: pink;
+  grid-area: hd;
+}
+#hero_fp {
+  grid-area: mm;
+  background-color: brown;
+}
+section {
+  grid-area: sc;
+  background-color: aquamarine;
+}
+nav {
+  grid-area: nv;
+  background-color: bisque;
+}
+footer {
+  grid-area: ft;
+  background-color: lightpink;
+}
