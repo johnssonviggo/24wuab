@@ -4,8 +4,8 @@ body {
 }
 #container_fp {
   display: grid;
-  grid-template-columns: 40vw, 60vw;
-  grid-template-rows: 500px, 500px 500px 500px 500px;
+  grid-template-columns: 65vw 35vw;
+  grid-template-rows: 100px 500px 500px 500px 150px;
   grid-template-areas:
     "hd nv"
     "mm mm"
@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  background-color: pink;
+  background-color: aqua;
   grid-area: hd;
 }
 #hero_fp {
@@ -32,4 +32,53 @@ nav {
 footer {
   grid-area: ft;
   background-color: lightpink;
+}
+
+@media screen and (min-width: 600px) {
+  #container_fp {
+    display: grid;
+    grid-template-columns: 25vw 75vw;
+    grid-template-rows: 100px 200px 500px 1000px 150px;
+    grid-template-areas:
+      "hd nv"
+      "mm mm"
+      "sc sc"
+      "ft ft";
+  }
+  header {
+    background-color: pink;
+    grid-area: hd;
+  }
+  #hero_fp {
+    grid-area: mm;
+    background-color: brown;
+  }
+  section {
+    grid-area: sc;
+    background-color: aquamarine;
+  }
+  nav {
+    grid-area: nv;
+    background-color: bisque;
+  }
+  footer {
+    grid-area: ft;
+    background-color: lightpink;
+  }
+}
+
+.company_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+  font-size: xx-large;
+  font-weight: 900;
+}
+
+.headers {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: xx-large;
 }
