@@ -1,65 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+
 body {
+  background-color: black;
   margin: 0;
   padding: 0;
 }
 #container_fp {
   display: grid;
-  grid-template-columns: 65vw 35vw;
-  grid-template-rows: 100px 500px 500px 500px 150px;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 100vh 500px 150px;
   grid-template-areas:
-    "hd nv"
     "mm mm"
     "sc sc"
     "ft ft";
 }
 
 header {
-  background-color: aqua;
+  background-color: #238ed5;
   grid-area: hd;
+  border-radius: 20px;
 }
+
 #hero_fp {
+  display: flex;
+  object-fit: cover;
+  background-color: #397daa;
   grid-area: mm;
-  background-color: brown;
+  border-radius: 20px;
 }
 section {
   grid-area: sc;
-  background-color: aquamarine;
+  background-color: darkblue;
+  border-radius: 20px;
 }
 nav {
   grid-area: nv;
-  background-color: bisque;
+  background-color: aqua;
+  border-radius: 20px;
 }
 footer {
   grid-area: ft;
-  background-color: lightpink;
+  background-color: #485157;
+  border-radius: 20px;
 }
 
 @media screen and (min-width: 600px) {
   #container_fp {
     display: grid;
-    grid-template-columns: 25vw 75vw;
-    grid-template-rows: 100px 200px 500px 1000px 150px;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 100vh 100vh 150px;
     grid-template-areas:
-      "hd nv"
       "mm mm"
       "sc sc"
       "ft ft";
   }
-  header {
+  musclemenu {
     background-color: pink;
-    grid-area: hd;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100px;
+    width: 35%;
+    background-color: transparent;
+    color: white;
   }
   #hero_fp {
     grid-area: mm;
-    background-color: brown;
+    background-image: url(/img/cool-burgare-medium.jpg);
+    background-size: cover;
+    background-position: center;
   }
   section {
     grid-area: sc;
     background-color: aquamarine;
   }
   nav {
-    grid-area: nv;
-    background-color: bisque;
+    position: fixed;
+    top: 0px;
+    left: 500px;
+    height: 100px;
+    width: 65%;
+    background-color: transparent;
   }
   footer {
     grid-area: ft;
@@ -71,14 +92,18 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: cursive;
-  font-size: xx-large;
-  font-weight: 900;
+  font-size: 60px;
+  font-weight: 700;
 }
 
 .headers {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-size: xx-large;
+  font-size: 60px;
+  font-weight: 700;
+}
+.headers a {
+  color: white;
+  text-decoration: none;
 }
