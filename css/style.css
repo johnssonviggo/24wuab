@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 #container_fp {
   display: grid;
   grid-template-columns: 65% 35%;
@@ -15,15 +16,10 @@ body {
     "ft ft";
 }
 
-header {
-  background-color: #238ed5;
-  grid-area: hd;
-}
-
 #hero_fp {
   display: flex;
-  object-fit: cover;
-  background-color: #397daa;
+  /* background-image: url(/img/cool_burgare-mobile.jpg); */
+  background-color: aqua;
   grid-area: mm;
 }
 section {
@@ -55,8 +51,8 @@ footer {
     left: 0px;
     height: 150px;
     width: 35%;
-    background-color: rgba(29, 29, 29, 0.9);
-    color: white;
+    background-color: rgba(18, 18, 18, 0.9);
+    color: darkgoldenrod;
   }
   #hero_fp {
     grid-area: mm;
@@ -70,16 +66,16 @@ footer {
     position: absolute;
     top: 320px;
     color: white;
-    font-size: 45px;
+    font-size: 60px;
     padding: 50px;
     font-weight: 700;
   }
   #slogan {
     display: flex;
     position: absolute;
-    top: 390px;
+    top: 400px;
     color: white;
-    font-size: 30px;
+    font-size: 40px;
     padding: 50px;
     font-weight: 700;
   }
@@ -93,12 +89,26 @@ footer {
     left: 35%;
     height: 150px;
     width: 65%;
-    background-color: rgba(29, 29, 29, 0.9);
+    background-color: rgba(18, 18, 18, 0.9);
     justify-content: space-around;
   }
   footer {
     grid-area: ft;
-    background-color: lightpink;
+    background-color: black;
+  }
+  .headers a {
+    color: lightgray;
+    text-decoration: none;
+  }
+
+  .text_footer {
+    position: absolute;
+    left: 40%;
+    top: 205%;
+    font-size: 50px;
+    font-weight: 700;
+    color: goldenrod;
+    text-decoration: none;
   }
 }
 
@@ -116,8 +126,4 @@ footer {
   justify-content: space-evenly;
   font-size: 60px;
   font-weight: 700;
-}
-.headers a {
-  color: white;
-  text-decoration: none;
 }
