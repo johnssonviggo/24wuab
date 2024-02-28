@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
-
 body {
   background-color: black;
   margin: 0;
@@ -15,7 +13,6 @@ body {
     "sc sc"
     "ft ft";
 }
-
 #hero_fp {
   display: flex;
   /* background-image: url(/img/cool_burgare-mobile.jpg); */
@@ -27,10 +24,9 @@ section {
   background-color: darkblue;
   border-radius: 20px;
 }
-
 footer {
   grid-area: ft;
-  background-color: #485157;
+  background-color: #2b2e31;
   border-radius: 20px;
 }
 
@@ -54,6 +50,10 @@ footer {
     background-color: rgba(18, 18, 18, 0.9);
     color: darkgoldenrod;
   }
+  musclemenu a {
+    color: darkgoldenrod;
+    text-decoration: none;
+  }
   #hero_fp {
     grid-area: mm;
     background-image: url(/img/cool-burgare-medium.jpg);
@@ -62,7 +62,6 @@ footer {
     border-radius: 20px;
   }
   #catchphrase {
-    display: flex;
     position: absolute;
     top: 320px;
     color: white;
@@ -74,7 +73,7 @@ footer {
     display: flex;
     position: absolute;
     top: 400px;
-    color: white;
+    color: rgb(150, 150, 150);
     font-size: 40px;
     padding: 50px;
     font-weight: 700;
@@ -94,21 +93,31 @@ footer {
   }
   footer {
     grid-area: ft;
-    background-color: black;
+    background-color: #1c1c1c;
   }
   .headers a {
     color: lightgray;
     text-decoration: none;
   }
-
   .text_footer {
-    position: absolute;
-    left: 40%;
-    top: 205%;
+    display: flex;
+    justify-content: center;
+  }
+  .text_footer a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: goldenrod;
     font-size: 50px;
     font-weight: 700;
-    color: goldenrod;
-    text-decoration: none;
+  }
+  .headers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 700;
+    gap: 110px;
   }
 }
 
@@ -117,13 +126,5 @@ footer {
   align-items: center;
   justify-content: center;
   font-size: 40px;
-  font-weight: 700;
-}
-
-.headers {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  font-size: 60px;
   font-weight: 700;
 }
