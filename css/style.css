@@ -33,7 +33,7 @@ footer {
 @media screen and (min-width: 600px) {
   #container_fp {
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 100%;
     grid-template-rows: 100vh 100vh 150px;
     grid-template-areas:
       "mm mm"
@@ -61,6 +61,7 @@ footer {
     background-position: center;
     border-radius: 20px;
   }
+
   #catchphrase {
     position: absolute;
     top: 320px;
