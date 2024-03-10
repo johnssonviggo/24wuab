@@ -14,10 +14,11 @@ body {
     "ft ft";
 }
 #hero_fp {
-  display: flex;
-  /* background-image: url(/img/cool_burgare-mobile.jpg); */
-  background-color: aqua;
   grid-area: mm;
+  display: flex;
+  background-image: url(/img/cool_burgare-mobile.jpg);
+  background-color: aqua;
+  background-size: cover;
 }
 section {
   grid-area: sc;
@@ -41,21 +42,14 @@ footer {
       "ft ft";
   }
   musclemenu {
-    background-color: pink;
     position: absolute;
     top: 0px;
     left: 0px;
     height: 150px;
     width: 35%;
-    background-color: rgba(18, 18, 18, 0.9);
-    color: darkgoldenrod;
   }
-  musclemenu a {
-    color: darkgoldenrod;
-    text-decoration: none;
-  }
+
   #hero_fp {
-    grid-area: mm;
     background-image: url(/img/cool-burgare-medium.jpg);
     background-size: cover;
     background-position: center;
@@ -120,6 +114,16 @@ footer {
     font-weight: 700;
     gap: 110px;
   }
+
+  #container_bulk {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh 100vh 150px;
+    grid-template-areas:
+      "mm mm"
+      "sc sc"
+      "ft ft";
+  }
 }
 
 .company_name {
@@ -128,4 +132,13 @@ footer {
   justify-content: center;
   font-size: 40px;
   font-weight: 700;
+}
+musclemenu {
+  background-color: rgba(18, 18, 18, 0.9);
+  color: darkgoldenrod;
+}
+
+musclemenu a {
+  color: darkgoldenrod;
+  text-decoration: none;
 }
