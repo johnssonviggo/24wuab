@@ -17,12 +17,11 @@ body {
   grid-area: mm;
   display: flex;
   background-image: url(/img/cool_burgare-mobile.jpg);
-  background-color: aqua;
   background-size: cover;
 }
 section {
   grid-area: sc;
-  background-color: darkblue;
+  background-color: pink;
   border-radius: 20px;
 }
 footer {
@@ -31,11 +30,74 @@ footer {
   border-radius: 20px;
 }
 
+#container_bulk {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh 200vh 150px;
+  grid-template-areas:
+    "mm mm"
+    "sc sc"
+    "ft ft";
+}
+
+.company_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 20px;
+}
+musclemenu {
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  height: 100px;
+  width: 35%;
+}
+musclemenu {
+  color: darkgoldenrod;
+}
+musclemenu a {
+  color: darkgoldenrod;
+  text-decoration: none;
+}
+nav {
+  position: absolute;
+  top: 40px;
+  left: 65%;
+  height: 150px;
+  width: 65%;
+}
+.text_footer a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: goldenrod;
+}
+
 @media screen and (min-width: 600px) {
   #container_fp {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100vh 100vh 150px;
+    grid-template-areas:
+      "mm mm"
+      "sc sc"
+      "ft ft";
+  }
+  #container_bulk {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh 200vh 150px;
+    grid-template-areas:
+      "mm mm"
+      "sc sc"
+      "ft ft";
+  }
+  #container_cut {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh 200vh 150px;
     grid-template-areas:
       "mm mm"
       "sc sc"
@@ -54,6 +116,12 @@ footer {
     background-size: cover;
     background-position: center;
     border-radius: 20px;
+  }
+  #sallad {
+    background-image: url(/img/nyttig_sallad_dator.jpg);
+  }
+  #fatty_burger {
+    
   }
 
   #catchphrase {
@@ -90,6 +158,10 @@ footer {
     grid-area: ft;
     background-color: #1c1c1c;
   }
+  #sallad {
+    background-image: url(/img/nyttig_sallad_dator.jpg);
+  }
+
   .headers a {
     color: lightgray;
     text-decoration: none;
@@ -99,10 +171,6 @@ footer {
     justify-content: center;
   }
   .text_footer a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: goldenrod;
     font-size: 50px;
     font-weight: 700;
   }
@@ -114,31 +182,14 @@ footer {
     font-weight: 700;
     gap: 110px;
   }
-
-  #container_bulk {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100vh 100vh 150px;
-    grid-template-areas:
-      "mm mm"
-      "sc sc"
-      "ft ft";
+  .company_name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
   }
-}
-
-.company_name {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 40px;
-  font-weight: 700;
-}
-musclemenu {
-  background-color: rgba(18, 18, 18, 0.9);
-  color: darkgoldenrod;
-}
-
-musclemenu a {
-  color: darkgoldenrod;
-  text-decoration: none;
+  musclemenu {
+    background-color: rgba(18, 18, 18, 0.9);
+    color: darkgoldenrod;
+  }
 }
