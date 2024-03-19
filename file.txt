@@ -1,0 +1,85 @@
+#header {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header nav {
+  display: none;
+}
+
+#header nav.visible {
+	display: block;
+}
+
+#header a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#toggle-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  width: 40px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+#toggle-nav .bar {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  border-radius: 999px;
+}
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+#myLinks.visible {
+	display: block;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+
+<header id="header">
+	<a class="logo" href="#">Logo</a>
+    
+    <nav>
+    	<a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </nav>
+    
+    <button id="toggle-nav">
+    	<div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </button>
+</header>
+
+</div>
+
+<script>
+const toggleNavBtn = document.getElementById('toggle-nav');
+
+toggleNavBtn.addEventListener('click', toggleNav);
+
+function toggleNav() {
+  let nav = document.querySelector("#header nav");
+  nav.classList.toggle('visible');
+}
+</script>
+
+</body>
+</html>
