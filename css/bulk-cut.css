@@ -2,76 +2,14 @@ body {
   background-color: black;
   margin: 0;
   padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-#container_fp {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: calc(100vh - 100px) 500px 150px;
-  grid-template-areas:
-    "mm "
-    "sc "
-    "ft ";
-}
-#hero_fp {
-  grid-area: mm;
-  display: flex;
-  background-image: url(/img/fp-mobile.jpg);
-  background-size: cover;
-}
-section {
-  grid-area: sc;
-  background-color: pink;
-  border-radius: 20px;
-}
 footer {
   grid-area: ft;
-  background-color: #2b2e31;
-  border-radius: 20px;
+  background-color: rgb(26, 26, 26);
 }
-#container_cut {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 100vh 200vh 150px;
-  grid-template-areas:
-    "mm mm"
-    "sc sc"
-    "ft ft";
-}
-#catchphrase {
-  position: absolute;
-  top: 350px;
-  color: white;
-  background-color: rgba(31, 31, 31, 0.9);
-  font-size: 14px;
-  padding: 20px;
-  border-radius: 20px;
-}
-#slogan {
-  position: absolute;
-  top: 490px;
-  color: lightgrey;
-  background-color: rgba(23, 23, 23, 0.9);
-  font-size: 20px;
-  padding: 20px;
-  border-radius: 40px;
-}
-
-#container_bulk {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 100vh 200vh 150px;
-  grid-template-areas:
-    "mm mm"
-    "sc sc"
-    "ft ft";
-}
-
-#sallad {
-  background-image: url(/img/cut-mobil.png);
-  background-size: cover;
-}
-
 .company_name {
   display: flex;
   align-items: center;
@@ -79,12 +17,16 @@ footer {
   font-weight: 900;
   font-size: 20px;
 }
+.headers a {
+  color: lightgray;
+  text-decoration: none;
+}
 
 .top_header {
   display: flex;
   left: 50px;
   background-color: black;
-  padding-inline: 10px;
+  padding-inline: 20px;
   align-items: center;
   justify-content: space-between;
   height: 100px;
@@ -101,16 +43,73 @@ footer {
   color: goldenrod;
 }
 
+#container_cut {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh 200vh 150px;
+  grid-template-areas:
+    "mm"
+    "sc"
+    "ft";
+}
+#container_bulk {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh 200vh 150px;
+  grid-template-areas:
+    "mm"
+    "sc"
+    "ft";
+}
+
+#fatty_burger {
+  background-image: url(/img/bulk-image.jpg);
+  background-size: cover;
+}
+#sallad {
+  background-image: url(/img/cut-mobil.png);
+  background-size: cover;
+}
+.top_header nav {
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 100px;
+  justify-content: space-between;
+  gap: 10px;
+  padding-inline: 10px;
+  flex-direction: column;
+  font-size: larger;
+  background-color: black;
+}
+
+.top_header nav.visible {
+  display: flex;
+}
+
+#toggle-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  width: 40px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+#toggle-nav .bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 999px;
+}
+
+#myLinks.visible {
+  display: block;
+}
+
 @media screen and (min-width: 600px) {
-  #container_fp {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: calc(100vh - 150px) 100vh 150px;
-    grid-template-areas:
-      "mm mm"
-      "sc sc"
-      "ft ft";
-  }
   #container_bulk {
     display: grid;
     grid-template-columns: 100%;
@@ -128,12 +127,6 @@ footer {
       "mm mm"
       "sc sc"
       "ft ft";
-  }
-  #hero_fp {
-    background-image: url(/img/chef-cooking.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
   }
   #sallad {
     background-image: url(/img/tasty-salad.jpg);
@@ -158,7 +151,7 @@ footer {
   #catchphrase {
     position: absolute;
     top: 320px;
-    left: 20px;
+    left: 50px;
     background-color: rgba(23, 23, 23, 0.9);
     font-size: 25px;
     padding: 20px;
@@ -167,23 +160,42 @@ footer {
   #slogan {
     position: absolute;
     top: 470px;
-    left: 20px;
+    left: 50px;
     font-size: 30px;
     font-weight: 700;
+    background-color: rgba(23, 23, 23, 0.9);
   }
   section {
     grid-area: sc;
-    background-color: aquamarine;
+    background-color: rgb(34, 34, 34);
+  }
+
+  #right_image {
+    display: flex;
+    padding-left: 30px;
+    margin-top: 150px;
+    gap: 50px;
+    padding-inline: 50px;
+    flex-direction: row;
+  }
+  #right_image img {
+    border-radius: 20px;
+    width: 50%;
+  }
+  #section-text h2 {
+    font-size: 40px;
+    color: white;
+  }
+  #section-text p {
+    color: white;
+    font-size: 25px;
   }
 
   footer {
     grid-area: ft;
-    background-color: #1c1c1c;
+    background-color: rgb(26, 26, 26);
   }
-  .headers a {
-    color: lightgray;
-    text-decoration: none;
-  }
+
   .text_footer {
     display: flex;
     justify-content: center;
@@ -209,22 +221,26 @@ footer {
   .top_header {
     display: flex;
     left: 50px;
-    background-color: rgba(18, 18, 18, 0.9);
     padding-inline: 50px;
     align-items: center;
     justify-content: space-between;
     height: 150px;
   }
 
-  .top_header_oss nav {
+  .top_header nav {
     display: none;
+    position: initial;
+    flex-direction: row;
+    gap: 100px;
+    font-size: 50px;
+    background-color: transparent;
   }
 
-  .top_header_oss nav.visible {
-    display: block;
+  .top_header nav.visible {
+    display: flex;
   }
 
-  .toggle-nav {
+  #toggle-nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -235,19 +251,10 @@ footer {
     cursor: pointer;
   }
 
-  .toggle-nav .bar {
-    width: 100%;
-    height: 2px;
+  #toggle-nav .bar {
+    width: 175%;
+    height: 7px;
     background-color: white;
     border-radius: 999px;
-  }
-
-  .active {
-    background-color: #04aa6d;
-    color: white;
-  }
-
-  #myLinks.visible {
-    display: block;
   }
 }

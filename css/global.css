@@ -1,0 +1,265 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#container_fp {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: calc(100vh - 100px) 800px 150px;
+  grid-template-areas:
+    "mm "
+    "sc "
+    "ft ";
+}
+#hero_fp {
+  grid-area: mm;
+  display: flex;
+  background-image: url(/img/fp-image-mobile.jpg);
+  background-size: cover;
+}
+section {
+  grid-area: sc;
+  background-color: rgb(34, 34, 34);
+}
+footer {
+  grid-area: ft;
+  background-color: rgb(26, 26, 26);
+}
+
+#catchphrase {
+  position: absolute;
+  top: 350px;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 20px;
+}
+#slogan {
+  position: absolute;
+  top: 460px;
+  color: white;
+  font-size: 25px;
+  padding: 20px;
+  border-radius: 40px;
+}
+.company_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.top_header {
+  display: flex;
+  left: 50px;
+  background-color: black;
+  padding-inline: 20px;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+.top_header .company_name a {
+  text-decoration: none;
+  color: darkgoldenrod;
+}
+
+.text_footer a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: goldenrod;
+}
+
+.headers a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+#right_image {
+  display: flex;
+  padding-left: 20px;
+  margin-top: 50px;
+  gap: 40px;
+  flex-direction: column;
+}
+#right_image img {
+  border-radius: 20px;
+  width: 90%;
+  height: 100%;
+}
+
+#section-text h2 {
+  font-size: 30px;
+  color: white;
+}
+#section-text p {
+  color: white;
+  font-size: 20px;
+}
+
+.text_footer {
+  display: flex;
+  justify-content: center;
+}
+.text_footer a {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.top_header nav {
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 100px;
+  justify-content: space-between;
+  gap: 10px;
+  padding-inline: 10px;
+  flex-direction: column;
+  font-size: larger;
+  background-color: black;
+}
+
+.top_header nav.visible {
+  display: flex;
+}
+
+#toggle-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  width: 40px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+#toggle-nav .bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 999px;
+}
+
+#myLinks.visible {
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  #container_fp {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: calc(100vh - 150px) 100vh 250px;
+    grid-template-areas:
+      "mm mm"
+      "sc sc"
+      "ft ft";
+  }
+  #hero_fp {
+    background-image: url(/img/chef-cooking.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  #catchphrase {
+    position: absolute;
+    top: 320px;
+    left: 50px;
+    background-color: rgba(23, 23, 23, 0.9);
+    font-size: 25px;
+    padding: 20px;
+    border-radius: 40px;
+  }
+  #slogan {
+    position: absolute;
+    top: 470px;
+    left: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    background-color: rgba(23, 23, 23, 0.9);
+  }
+  section {
+    grid-area: sc;
+    background-color: rgb(34, 34, 34);
+  }
+
+  #right_image {
+    display: flex;
+    padding-left: 30px;
+    margin-top: 150px;
+    gap: 50px;
+    padding-inline: 50px;
+    flex-direction: row;
+  }
+  #right_image img {
+    border-radius: 20px;
+    width: 50%;
+  }
+  #section-text h2 {
+    font-size: 40px;
+    color: white;
+  }
+  #section-text p {
+    color: white;
+    font-size: 25px;
+  }
+
+  footer {
+    grid-area: ft;
+    background-color: rgb(26, 26, 26);
+  }
+
+  .text_footer a {
+    font-size: 50px;
+  }
+  .headers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 400;
+    gap: 110px;
+  }
+  .company_name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+  }
+  .top_header {
+    display: flex;
+    left: 50px;
+    background-color: rgba(18, 18, 18, 0.9);
+    padding-inline: 50px;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+  }
+
+  .top_header nav {
+    display: flex;
+    position: initial;
+    justify-content: space-between;
+    gap: 100px;
+    padding-inline: 10px;
+    flex-direction: row;
+    font-size: 50px;
+    background-color: transparent;
+  }
+
+  .top_header nav.visible {
+    display: flex;
+  }
+
+  #toggle-nav {
+    display: none;
+  }
+
+  #myLinks {
+    display: flex;
+  }
+}

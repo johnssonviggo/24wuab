@@ -1,0 +1,193 @@
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#container_about_us {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: calc(100vh - 100px) 800px 150px;
+  grid-template-areas:
+    "mm "
+    "sc "
+    "ft ";
+}
+footer {
+  grid-area: ft;
+  background-color: rgb(26, 26, 26);
+}
+.company_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.headers a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.top_header {
+  display: flex;
+  left: 50px;
+  background-color: black;
+  padding-inline: 20px;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+.top_header .company_name a {
+  text-decoration: none;
+  color: darkgoldenrod;
+}
+
+.text_footer a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: goldenrod;
+}
+
+.top_header nav {
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 100px;
+  justify-content: space-between;
+  gap: 10px;
+  padding-inline: 10px;
+  flex-direction: column;
+  font-size: larger;
+  background-color: black;
+}
+
+.top_header nav.visible {
+  display: flex;
+}
+
+#toggle-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  width: 40px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+#toggle-nav .bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 999px;
+}
+
+#myLinks.visible {
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  #container_fp {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: calc(100vh - 150px) 100vh 150px;
+    grid-template-areas:
+      "mm mm"
+      "sc sc"
+      "ft ft";
+  }
+  #container_bulk {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh 200vh 150px;
+    grid-template-areas:
+      "mm mm"
+      "sc sc"
+      "ft ft";
+  }
+  #container_cut {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh 200vh 150px;
+    grid-template-areas:
+      "mm mm"
+      "sc sc"
+      "ft ft";
+  }
+
+  section {
+    grid-area: sc;
+    background-color: aquamarine;
+  }
+
+  footer {
+    grid-area: ft;
+    background-color: #1c1c1c;
+  }
+  .text_footer {
+    display: flex;
+    justify-content: center;
+  }
+  .text_footer a {
+    font-size: 50px;
+    font-weight: 700;
+  }
+  .headers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 400;
+    gap: 110px;
+  }
+  .company_name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+  }
+  .top_header {
+    display: flex;
+    left: 50px;
+    padding-inline: 50px;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+  }
+
+  .top_header nav {
+    display: none;
+    position: initial;
+    flex-direction: row;
+    gap: 100px;
+    font-size: 50px;
+    background-color: transparent;
+  }
+
+  .top_header nav.visible {
+    display: flex;
+  }
+
+  #toggle-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    width: 40px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  #toggle-nav .bar {
+    width: 175%;
+    height: 7px;
+    background-color: white;
+    border-radius: 999px;
+  }
+}
