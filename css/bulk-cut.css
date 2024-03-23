@@ -5,6 +5,29 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+#container_cut {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 60vh 200vh 150px;
+  grid-template-areas:
+    "mm"
+    "sc"
+    "ft";
+}
+#container_bulk {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50vh 400vh 150px;
+  grid-template-areas:
+    "mm"
+    "sc"
+    "ft";
+}
+
+section {
+  grid-area: sc;
+  background-color: rgb(34, 34, 34);
+}
 
 footer {
   grid-area: ft;
@@ -21,6 +44,14 @@ footer {
   color: lightgray;
   text-decoration: none;
 }
+.bulkocut_text {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  padding-left: 20px;
+  font-size: 25px;
+  color: white;
+}
 
 .top_header {
   display: flex;
@@ -33,42 +64,25 @@ footer {
 }
 .top_header .company_name a {
   text-decoration: none;
-  color: darkgoldenrod;
+  color: gold;
 }
 
 .text_footer a {
   display: flex;
-  align-items: center;
   text-decoration: none;
-  color: goldenrod;
-}
-
-#container_cut {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 100vh 200vh 150px;
-  grid-template-areas:
-    "mm"
-    "sc"
-    "ft";
-}
-#container_bulk {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 100vh 200vh 150px;
-  grid-template-areas:
-    "mm"
-    "sc"
-    "ft";
+  color: white;
+  padding-left: 20px;
 }
 
 #fatty_burger {
-  background-image: url(/img/bulk-image.jpg);
+  background-image: url(/img/mobil-bulk-p.jpg);
   background-size: cover;
+  background-position: center;
 }
 #sallad {
   background-image: url(/img/cut-mobil.png);
   background-size: cover;
+  background-position: center;
 }
 .top_header nav {
   display: none;
@@ -109,11 +123,81 @@ footer {
   display: block;
 }
 
+#tre-recept {
+  display: flex;
+  flex-direction: column;
+}
+
+#burger-recept {
+  display: flex;
+  padding-left: 20px;
+  margin-top: 100px;
+  flex-direction: column;
+  width: 80%;
+  gap: 20px;
+}
+#chocolate-milkshake {
+  display: flex;
+  padding-left: 20px;
+  margin-top: 60px;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+}
+#muffin {
+  display: flex;
+  padding-left: 20px;
+  margin-top: 50px;
+  width: 80%;
+  flex-direction: column;
+  gap: 20px;
+}
+#chicken-rice {
+  display: flex;
+  padding-left: 20px;
+  margin-top: 100px;
+  flex-direction: column;
+  width: 85%;
+}
+#fruit-smoothie {
+  display: flex;
+  padding-inline: 20px;
+  margin-top: 100px;
+  flex-direction: column;
+  width: 85%;
+}
+#tre-recept img {
+  border-radius: 20px;
+  width: 100%;
+}
+.tre-recept-texter h3 {
+  color: white;
+  font-size: 25px;
+}
+.tre-recept-texter p {
+  font-size: 18px;
+  color: white;
+}
+.burger-button a {
+  text-decoration: none;
+  color: black;
+}
+.burger-button {
+  height: 50px;
+  font-size: large;
+  border-radius: 10px;
+}
+.text_footer a {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 50px;
+}
+
 @media screen and (min-width: 600px) {
   #container_bulk {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100vh 200vh 150px;
+    grid-template-rows: 400px 1000px 300px;
     grid-template-areas:
       "mm mm"
       "sc sc"
@@ -122,15 +206,17 @@ footer {
   #container_cut {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100vh 200vh 150px;
+    grid-template-rows: 400px 900px 300px;
     grid-template-areas:
-      "mm mm"
-      "sc sc"
-      "ft ft";
+      "mm"
+      "sc"
+      "ft";
   }
+
   #sallad {
     background-image: url(/img/tasty-salad.jpg);
     background-size: cover;
+    background-position: center;
   }
   #fatty_burger {
     background-image: url(/img/fried-chicken.jpg);
@@ -138,71 +224,19 @@ footer {
   }
 
   .bulkocut_text {
-    position: absolute;
-    top: 400px;
-    right: 60px;
-    font-size: 25px;
-    color: lightgrey;
-    background-color: rgba(38, 38, 38, 0.9);
-    padding: 20px;
-    border-radius: 40px;
-  }
-
-  #catchphrase {
-    position: absolute;
-    top: 320px;
-    left: 50px;
-    background-color: rgba(23, 23, 23, 0.9);
-    font-size: 25px;
-    padding: 20px;
-    border-radius: 40px;
-  }
-  #slogan {
-    position: absolute;
-    top: 470px;
-    left: 50px;
-    font-size: 30px;
-    font-weight: 700;
-    background-color: rgba(23, 23, 23, 0.9);
-  }
-  section {
-    grid-area: sc;
-    background-color: rgb(34, 34, 34);
-  }
-
-  #right_image {
     display: flex;
-    padding-left: 30px;
-    margin-top: 150px;
-    gap: 50px;
-    padding-inline: 50px;
-    flex-direction: row;
-  }
-  #right_image img {
-    border-radius: 20px;
-    width: 50%;
-  }
-  #section-text h2 {
-    font-size: 40px;
-    color: white;
-  }
-  #section-text p {
-    color: white;
+    justify-content: center;
+    margin-top: 100px;
     font-size: 25px;
-  }
-
-  footer {
-    grid-area: ft;
-    background-color: rgb(26, 26, 26);
+    color: white;
   }
 
   .text_footer {
     display: flex;
-    justify-content: center;
+    padding-left: 50px;
   }
   .text_footer a {
     font-size: 50px;
-    font-weight: 700;
   }
   .headers {
     display: flex;
@@ -218,6 +252,67 @@ footer {
     justify-content: center;
     font-size: 40px;
   }
+  #tre-recept {
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+  }
+
+  #burger-recept {
+    display: flex;
+    padding-inline: 50px;
+    margin-top: 100px;
+    flex-direction: column;
+    width: 25%;
+  }
+  #chocolate-milkshake {
+    display: flex;
+    padding-inline: 50px;
+    margin-top: 100px;
+    flex-direction: column;
+    width: 25%;
+  }
+  #muffin {
+    display: flex;
+    padding-inline: 50px;
+    margin-top: 100px;
+    flex-direction: column;
+    width: 25%;
+  }
+  #chicken-rice {
+    display: flex;
+    padding-left: 50px;
+    margin-top: 100px;
+    flex-direction: column;
+    width: 40%;
+  }
+  #fruit-smoothie {
+    display: flex;
+    padding-inline: 50px;
+    margin-top: 100px;
+    flex-direction: column;
+    width: 48%;
+  }
+  #tre-recept img {
+    border-radius: 20px;
+    width: 100%;
+  }
+  #tre-cut-recept img {
+    border-radius: 20px;
+    width: 100%;
+  }
+  #tre-recept p {
+    font-size: 18px;
+    color: white;
+  }
+
+  .burger-button {
+    height: 50px;
+    width: 30%;
+    font-size: large;
+    border-radius: 10px;
+  }
+
   .top_header {
     display: flex;
     left: 50px;

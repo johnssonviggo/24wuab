@@ -65,14 +65,13 @@ footer {
 }
 .top_header .company_name a {
   text-decoration: none;
-  color: darkgoldenrod;
+  color: gold;
 }
 
 .text_footer a {
   display: flex;
-  align-items: center;
   text-decoration: none;
-  color: goldenrod;
+  color: white;
 }
 
 .headers a {
@@ -104,11 +103,12 @@ footer {
 
 .text_footer {
   display: flex;
-  justify-content: center;
 }
 .text_footer a {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
+  margin-top: 50px;
+  padding-left: 50px;
 }
 
 .top_header nav {
@@ -156,9 +156,9 @@ footer {
     grid-template-columns: 100%;
     grid-template-rows: calc(100vh - 150px) 100vh 250px;
     grid-template-areas:
-      "mm mm"
-      "sc sc"
-      "ft ft";
+      "mm"
+      "sc"
+      "ft";
   }
   #hero_fp {
     background-image: url(/img/chef-cooking.jpg);
@@ -189,7 +189,6 @@ footer {
 
   #right_image {
     display: flex;
-    padding-left: 30px;
     margin-top: 150px;
     gap: 50px;
     padding-inline: 50px;
