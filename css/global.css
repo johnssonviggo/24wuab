@@ -18,7 +18,7 @@ body {
 #hero_fp {
   grid-area: mm;
   display: flex;
-  background-image: url(/img/fp-image-mobile.jpg);
+  background-image: url(/img/mobil-fp2.jpg);
   background-size: cover;
 }
 section {
