@@ -8,10 +8,9 @@ body {
 #container_about_us {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: calc(100vh - 100px) 800px 300px;
+  grid-template-rows: 180vh 200px;
   grid-template-areas:
     "mm "
-    "sc "
     "ft ";
 }
 footer {
@@ -47,10 +46,12 @@ footer {
 
 .text_footer a {
   display: flex;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 50px;
+  padding-left: 20px;
   text-decoration: none;
   color: white;
-  padding-left: 20px;
-  margin-top: 50px;
 }
 
 .top_header nav {
@@ -91,34 +92,52 @@ footer {
 #myLinks.visible {
   display: block;
 }
+#image-of-eirik {
+  width: 80%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#image-of-eirik img {
+  display: flex;
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 70px;
+}
+#employee-text {
+  color: white;
+}
+#employee-text h3 {
+  font-size: 30px;
+}
+#employee-text p {
+  font-size: 20px;
+}
+#employee-text {
+  margin-top: 20px;
+}
+#about-us-links {
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 20px;
+}
+#about-us-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
 
 @media screen and (min-width: 600px) {
-  #container_fp {
+  #container_about_us {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: calc(100vh - 150px) 100vh 150px;
+    grid-template-rows: 110vh 300px;
     grid-template-areas:
-      "mm mm"
-      "sc sc"
-      "ft ft";
-  }
-  #container_bulk {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100vh 200vh 150px;
-    grid-template-areas:
-      "mm mm"
-      "sc sc"
-      "ft ft";
-  }
-  #container_cut {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100vh 200vh 150px;
-    grid-template-areas:
-      "mm mm"
-      "sc sc"
-      "ft ft";
+      "mm "
+      "ft ";
   }
 
   section {
@@ -130,13 +149,44 @@ footer {
     grid-area: ft;
     background-color: #1c1c1c;
   }
-  .text_footer {
+  #image-of-eirik {
+    width: 70%;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+  }
+  #image-of-eirik img {
+    display: flex;
+    width: 40%;
+    border-radius: 20px;
+    margin-top: 100px;
+  }
+  #employee-text h3 {
+    font-size: 40px;
+  }
+
+  #employee-text {
+    margin-top: 150px;
+  }
+  #about-us-links {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #about-us-links li:hover {
+    transform: scale(1.05);
+  }
+
+  .text_footer a {
     display: flex;
     padding-left: 50px;
   }
   .text_footer a {
     font-size: 50px;
-    font-weight: 700;
+    font-weight: 600;
   }
   .headers {
     display: flex;
